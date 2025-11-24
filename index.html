@@ -70,32 +70,6 @@
             -webkit-user-select: none;
         }
 
-        /* Toast Notification */
-        #toast {
-            visibility: hidden;
-            min-width: 250px; 
-            background-color: #1E293B; 
-            color: #fff; 
-            text-align: center; 
-            border-radius: 50px; 
-            padding: 16px 24px; 
-            position: fixed; 
-            z-index: 100; 
-            left: 50%; 
-            bottom: 30px; 
-            transform: translateX(-50%) translateY(20px);
-            opacity: 0;
-            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-
-        #toast.show {
-            visibility: visible;
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
-            bottom: 50px;
-        }
-
         /* Ensure images are perfectly centered */
         .img-centered {
             object-position: center center;
@@ -125,7 +99,7 @@
                     <a href="#comparisons" class="text-slate-600 hover:text-primary transition-colors font-medium text-sm uppercase tracking-wide">Real Results</a>
                     <a href="#testimonials" class="text-slate-600 hover:text-primary transition-colors font-medium text-sm uppercase tracking-wide">Testimonials</a>
                     <a href="#contact" class="bg-slate-900 text-white px-6 py-2.5 rounded-full hover:bg-primary transition-all duration-300 font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm">
-                        Start Project
+                        Contact Us
                     </a>
                 </div>
 
@@ -145,7 +119,7 @@
                 <a href="#services" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50">Services</a>
                 <a href="#comparisons" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50">Real Results</a>
                 <a href="#testimonials" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50">Testimonials</a>
-                <a href="#contact" class="block px-3 py-3 rounded-md text-base font-medium text-primary font-bold">Get Started</a>
+                <a href="#contact" class="block px-3 py-3 rounded-md text-base font-medium text-primary font-bold">Contact Us</a>
             </div>
         </div>
     </nav>
@@ -214,7 +188,7 @@
                                 </div>
                             </div>
 
-                            <!-- Top Image (Raw) - Note the class 'resize-boundary' used for JS -->
+                            <!-- Top Image (Raw) -->
                             <div class="resize-boundary absolute top-0 left-0 h-full w-[50%] overflow-hidden bg-slate-200 will-change-[width] z-20">
                                 <img src="dish-before-1.png" 
                                      draggable="false"
@@ -293,7 +267,7 @@
         </div>
     </section>
 
-    <!-- NEW: Before & After Comparison Showcase (Replaces Old Gallery) -->
+    <!-- NEW: Before & After Comparison Showcase -->
     <section id="comparisons" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
@@ -307,20 +281,16 @@
             </div>
 
             <!-- Comparison Grid -->
-            <!-- Changed grid-cols to ensure a 2x2 layout on desktop (removed lg:grid-cols-3) -->
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 
-                <!-- Card 1 (SLIDER VERSION) -->
+                <!-- Card 1 -->
                 <div class="bg-white rounded-3xl p-4 shadow-xl shadow-slate-200/50 border border-slate-100 group" id="compare-1">
-                    <!-- Aspect Ratio Container -->
                     <div class="relative aspect-[4/5] w-full rounded-2xl overflow-hidden mb-4 bg-slate-100 select-none isolate-overflow cursor-ew-resize interactive-slider">
-                        
-                        <!-- Bottom Image (Enhanced) -->
+                        <!-- Bottom Image -->
                         <div class="absolute inset-0 w-full h-full">
                             <img src="dish-after-2.png" 
                                  draggable="false"
                                  class="w-full h-full object-cover img-centered">
-                            <!-- Label -->
                             <div class="absolute top-4 right-4 z-10">
                                 <span class="bg-primary/90 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg border border-white/20">
                                     Enhanced
@@ -328,12 +298,11 @@
                             </div>
                         </div>
 
-                        <!-- Top Image (Raw) -->
+                        <!-- Top Image -->
                         <div class="resize-boundary absolute top-0 left-0 h-full w-[50%] overflow-hidden bg-slate-200 will-change-[width] z-20">
                             <img src="dish-before-2.png" 
                                  draggable="false"
                                  class="resize-img absolute top-0 left-0 max-w-none h-full object-cover img-centered will-change-[width]">
-                            <!-- Label -->
                             <div class="absolute top-4 left-4 z-10">
                                 <span class="bg-black/60 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg border border-white/10">
                                     Raw
@@ -349,7 +318,6 @@
                                 <div class="absolute inset-1 rounded-full border border-slate-100"></div>
                             </div>
                         </div>
-
                     </div>
                     
                     <div class="mt-4 px-2">
@@ -358,18 +326,14 @@
                     </div>
                 </div>
 
-                <!-- Card 2 (CONVERTED TO SLIDER) -->
-                <!-- Removed hover translation effects to prevent jitter while dragging -->
+                <!-- Card 2 -->
                 <div class="bg-white rounded-3xl p-4 shadow-xl shadow-slate-200/50 border border-slate-100 group" id="compare-2">
-                    <!-- Aspect Ratio Container with Slider Classes -->
                     <div class="relative aspect-[4/5] w-full rounded-2xl overflow-hidden mb-4 bg-slate-100 select-none isolate-overflow cursor-ew-resize interactive-slider">
-                        
-                        <!-- Bottom Image (Enhanced) -->
+                        <!-- Bottom Image -->
                         <div class="absolute inset-0 w-full h-full">
                             <img src="dish-after-3.png" 
                                  draggable="false"
                                  class="w-full h-full object-cover img-centered">
-                            <!-- Label -->
                             <div class="absolute top-4 right-4 z-10">
                                 <span class="bg-primary/90 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg border border-white/20">
                                     Enhanced
@@ -377,12 +341,11 @@
                             </div>
                         </div>
 
-                        <!-- Top Image (Raw) -->
+                        <!-- Top Image -->
                         <div class="resize-boundary absolute top-0 left-0 h-full w-[50%] overflow-hidden bg-slate-200 will-change-[width] z-20">
                             <img src="dish-before-3.png" 
                                  draggable="false"
                                  class="resize-img absolute top-0 left-0 max-w-none h-full object-cover img-centered will-change-[width]">
-                            <!-- Label -->
                             <div class="absolute top-4 left-4 z-10">
                                 <span class="bg-black/60 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg border border-white/10">
                                     Raw
@@ -398,28 +361,22 @@
                                 <div class="absolute inset-1 rounded-full border border-slate-100"></div>
                             </div>
                         </div>
-
                     </div>
                     
-                    <!-- Text Content (No toggle buttons anymore) -->
                     <div class="mt-4 px-2">
                         <h3 class="font-bold text-slate-900">Wonton Soup</h3>
                         <p class="text-xs text-slate-500 uppercase tracking-wide">White Balance • Clarity</p>
                     </div>
                 </div>
 
-                <!-- Card 3 (CONVERTED TO SLIDER) -->
-                <!-- Removed hover translation effects to prevent jitter while dragging -->
+                <!-- Card 3 -->
                 <div class="bg-white rounded-3xl p-4 shadow-xl shadow-slate-200/50 border border-slate-100 group" id="compare-3">
-                    <!-- Aspect Ratio Container with Slider Classes -->
                     <div class="relative aspect-[4/5] w-full rounded-2xl overflow-hidden mb-4 bg-slate-100 select-none isolate-overflow cursor-ew-resize interactive-slider">
-                        
-                        <!-- Bottom Image (Enhanced) -->
+                        <!-- Bottom Image -->
                         <div class="absolute inset-0 w-full h-full">
                             <img src="dish-after-4.png" 
                                  draggable="false"
                                  class="w-full h-full object-cover img-centered">
-                            <!-- Label -->
                             <div class="absolute top-4 right-4 z-10">
                                 <span class="bg-primary/90 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg border border-white/20">
                                     Enhanced
@@ -427,12 +384,11 @@
                             </div>
                         </div>
 
-                        <!-- Top Image (Raw) -->
+                        <!-- Top Image -->
                         <div class="resize-boundary absolute top-0 left-0 h-full w-[50%] overflow-hidden bg-slate-200 will-change-[width] z-20">
                             <img src="dish-before-4.png" 
                                  draggable="false"
                                  class="resize-img absolute top-0 left-0 max-w-none h-full object-cover img-centered will-change-[width]">
-                            <!-- Label -->
                             <div class="absolute top-4 left-4 z-10">
                                 <span class="bg-black/60 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg border border-white/10">
                                     Raw
@@ -448,7 +404,6 @@
                                 <div class="absolute inset-1 rounded-full border border-slate-100"></div>
                             </div>
                         </div>
-
                     </div>
                     
                     <div class="mt-4 px-2">
@@ -457,17 +412,14 @@
                     </div>
                 </div>
 
-                <!-- Card 4 (NEW SLIDER WITH dish-before-5 and dish-after-5) -->
+                <!-- Card 4 -->
                 <div class="bg-white rounded-3xl p-4 shadow-xl shadow-slate-200/50 border border-slate-100 group" id="compare-4">
-                    <!-- Aspect Ratio Container with Slider Classes -->
                     <div class="relative aspect-[4/5] w-full rounded-2xl overflow-hidden mb-4 bg-slate-100 select-none isolate-overflow cursor-ew-resize interactive-slider">
-                        
-                        <!-- Bottom Image (Enhanced) -->
+                        <!-- Bottom Image -->
                         <div class="absolute inset-0 w-full h-full">
                             <img src="dish-after-5.png" 
                                  draggable="false"
                                  class="w-full h-full object-cover img-centered">
-                            <!-- Label -->
                             <div class="absolute top-4 right-4 z-10">
                                 <span class="bg-primary/90 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg border border-white/20">
                                     Enhanced
@@ -475,12 +427,11 @@
                             </div>
                         </div>
 
-                        <!-- Top Image (Raw) -->
+                        <!-- Top Image -->
                         <div class="resize-boundary absolute top-0 left-0 h-full w-[50%] overflow-hidden bg-slate-200 will-change-[width] z-20">
                             <img src="dish-before-5.png" 
                                  draggable="false"
                                  class="resize-img absolute top-0 left-0 max-w-none h-full object-cover img-centered will-change-[width]">
-                            <!-- Label -->
                             <div class="absolute top-4 left-4 z-10">
                                 <span class="bg-black/60 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg border border-white/10">
                                     Raw
@@ -496,10 +447,8 @@
                                 <div class="absolute inset-1 rounded-full border border-slate-100"></div>
                             </div>
                         </div>
-
                     </div>
                     
-                    <!-- Text Content -->
                     <div class="mt-4 px-2">
                         <h3 class="font-bold text-slate-900">Mashed Potatoes & Gravy</h3>
                         <p class="text-xs text-slate-500 uppercase tracking-wide">Highlight Recovery • Detail</p>
@@ -542,56 +491,44 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section (Redesigned - No Form) -->
     <section id="contact" class="py-24 bg-white relative">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Let's Frame Your Flavor</h2>
-                <p class="text-slate-600">Fill out the form below to get a quote or a free sample edit.</p>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-primary font-bold tracking-wider uppercase text-xs">Ready to start?</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">Get In Touch</h2>
+                <p class="text-slate-600 mt-4 max-w-lg mx-auto">We'd love to hear about your project. Reach out directly for quotes and availability.</p>
             </div>
 
-            <div class="bg-slate-50 rounded-3xl p-8 md:p-10 shadow-lg border border-slate-100">
-                <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Name</label>
-                            <input type="text" placeholder="Jane Doe" required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Restaurant Name</label>
-                            <input type="text" placeholder="Tasty Bites" required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
-                        </div>
+            <div class="bg-white rounded-3xl p-8 md:p-16 shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20">
+                
+                <!-- Email -->
+                <div class="flex flex-col items-center gap-4 group transition-transform hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-primary mb-2 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i class="ph-fill ph-envelope-simple text-3xl"></i>
                     </div>
-                    <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-2">Email</label>
-                        <input type="email" placeholder="jane@example.com" required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+                    <div class="text-center">
+                        <p class="text-slate-500 text-sm font-medium uppercase tracking-wide mb-1">Email Us</p>
+                        <p class="text-slate-900 font-bold text-xl md:text-2xl hover:text-primary transition-colors select-all">flavorframestudio@gmail.com</p>
                     </div>
-                    <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-2">Service</label>
-                        <select class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-slate-600">
-                            <option>Photo Enhancement (General)</option>
-                            <option>Social Media Package</option>
-                            <option>Menu Optimization</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-2">Message</label>
-                        <textarea rows="4" placeholder="Tell us about your project..." class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-slate-900 text-white font-bold py-4 rounded-xl hover:bg-primary transition-colors shadow-lg flex items-center justify-center gap-2">
-                        <i class="ph-bold ph-paper-plane-right"></i> Send Inquiry
-                    </button>
-                </form>
-            </div>
-            
-            <div class="mt-12 flex justify-center gap-8 text-slate-500">
-                <div class="flex items-center gap-2">
-                    <i class="ph-fill ph-envelope-simple text-primary"></i> flavorframestudio@gmail.com
                 </div>
-                <div class="flex items-center gap-2">
-                    <i class="ph-fill ph-phone text-primary"></i> (417) 551-1487
+
+                <!-- Divider (Desktop) -->
+                <div class="hidden md:block w-px h-24 bg-gradient-to-b from-transparent via-slate-200 to-transparent"></div>
+                <!-- Divider (Mobile) -->
+                <div class="md:hidden w-24 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
+
+                <!-- Phone -->
+                <div class="flex flex-col items-center gap-4 group transition-transform hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center text-primary mb-2 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i class="ph-fill ph-phone text-3xl"></i>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-slate-500 text-sm font-medium uppercase tracking-wide mb-1">Call Us</p>
+                        <p class="text-slate-900 font-bold text-xl md:text-2xl hover:text-primary transition-colors select-all">(417) 551-1487</p>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -614,14 +551,6 @@
         </div>
     </footer>
 
-    <!-- Toast Notification Element -->
-    <div id="toast">
-        <div class="flex items-center gap-3">
-            <i class="ph-fill ph-check-circle text-green-400 text-xl"></i>
-            <span>Message sent! We'll be in touch.</span>
-        </div>
-    </div>
-
     <!-- Logic -->
     <script>
         // --- Mobile Menu Toggle ---
@@ -632,8 +561,7 @@
             menu.classList.toggle('hidden');
         });
 
-        // --- NEW: Toggle Before/After Cards Logic (For remaining cards) ---
-        // Although all cards are sliders now, this function is kept safe in case you add button-cards later.
+        // --- Toggle Before/After Cards Logic ---
         function toggleCompare(id, state) {
             const card = document.getElementById(`compare-${id}`);
             if (!card) return;
@@ -643,47 +571,32 @@
             const btnAfter = card.querySelector('.btn-after');
             const badge = card.querySelector('.badge-label');
 
-            if (!imgBefore) return; // Exit if not a button-card
+            if (!imgBefore) return;
 
             if (state === 'before') {
-                // Show Before
                 imgBefore.classList.remove('opacity-0');
                 imgAfter.classList.add('opacity-0');
-                
-                // Update Buttons
                 btnBefore.classList.add('bg-white', 'shadow-sm', 'text-slate-900');
                 btnBefore.classList.remove('text-slate-500', 'hover:text-slate-700');
-                
                 btnAfter.classList.remove('bg-white', 'shadow-sm', 'text-slate-900');
                 btnAfter.classList.add('text-slate-500', 'hover:text-slate-700');
-
-                // Update Badge
                 badge.textContent = "Raw";
                 badge.classList.remove('bg-white/90', 'text-slate-900');
                 badge.classList.add('bg-black/60', 'text-white');
-
             } else {
-                // Show After
                 imgBefore.classList.add('opacity-0');
                 imgAfter.classList.remove('opacity-0');
-
-                // Update Buttons
                 btnAfter.classList.add('bg-white', 'shadow-sm', 'text-slate-900');
                 btnAfter.classList.remove('text-slate-500', 'hover:text-slate-700');
-
                 btnBefore.classList.remove('bg-white', 'shadow-sm', 'text-slate-900');
                 btnBefore.classList.add('text-slate-500', 'hover:text-slate-700');
-
-                // Update Badge
                 badge.textContent = "Enhanced";
                 badge.classList.add('bg-white/90', 'text-slate-900');
                 badge.classList.remove('bg-black/60', 'text-white');
             }
         }
 
-        // --- REFACTORED: Multi-Slider Logic ---
-        // Loops through all elements with class 'interactive-slider' and initializes them independently
-        
+        // --- Multi-Slider Logic ---
         function initSliders() {
             const sliders = document.querySelectorAll('.interactive-slider');
 
@@ -692,15 +605,13 @@
                 const resizeImg = sliderRoot.querySelector('.resize-img');
                 const handle = sliderRoot.querySelector('.slider-handle');
                 
-                if (!resizeBoundary || !resizeImg || !handle) return; // Skip if structure missing
+                if (!resizeBoundary || !resizeImg || !handle) return;
 
                 let isDragging = false;
 
                 function syncImageWidth() {
                     if (!sliderRoot || !resizeImg) return;
                     const rootWidth = sliderRoot.getBoundingClientRect().width;
-                    
-                    // Sync image width to container width (simulates cropping)
                     resizeImg.style.width = `${rootWidth}px`;
                 }
 
@@ -717,11 +628,9 @@
                     handle.style.left = `${percentage}%`;
                 }
 
-                // Event Listeners for this specific slider instance
                 sliderRoot.addEventListener('mousedown', () => isDragging = true);
                 sliderRoot.addEventListener('touchstart', () => isDragging = true);
                 
-                // Global events for release/move (to handle dragging outside container)
                 window.addEventListener('mouseup', () => isDragging = false);
                 window.addEventListener('touchend', () => isDragging = false);
                 
@@ -739,34 +648,16 @@
                     moveSlider(e.clientX);
                 });
 
-                // Resize observer to keep images synced
                 window.addEventListener('resize', syncImageWidth);
-                
-                // Initial sync
                 syncImageWidth();
             });
         }
 
-        // Initialize on load
         window.addEventListener('load', initSliders);
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', initSliders);
         } else {
             initSliders();
-        }
-
-        // --- Contact Form Toast ---
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            const toast = document.getElementById("toast");
-            const form = document.getElementById("contactForm");
-            
-            toast.className = "show";
-            form.reset();
-            
-            setTimeout(function(){ 
-                toast.className = toast.className.replace("show", ""); 
-            }, 3000);
         }
 
         // --- Navbar Scroll Effect ---
