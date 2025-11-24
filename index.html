@@ -358,30 +358,53 @@
                     </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="bg-white rounded-3xl p-4 shadow-xl shadow-slate-200/50 border border-slate-100 group hover:-translate-y-1 transition-transform duration-300" id="compare-2">
-                    <div class="relative aspect-[4/5] w-full rounded-2xl overflow-hidden mb-4 bg-slate-100">
-                        <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             style="filter: grayscale(30%) brightness(110%) contrast(80%);"
-                             class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out img-before pointer-events-none" 
-                             alt="Toast Before">
+                <!-- Card 2 (CONVERTED TO SLIDER) -->
+                <!-- Removed hover translation effects to prevent jitter while dragging -->
+                <div class="bg-white rounded-3xl p-4 shadow-xl shadow-slate-200/50 border border-slate-100 group" id="compare-2">
+                    <!-- Aspect Ratio Container with Slider Classes -->
+                    <div class="relative aspect-[4/5] w-full rounded-2xl overflow-hidden mb-4 bg-slate-100 select-none isolate-overflow cursor-ew-resize interactive-slider">
                         
-                        <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 img-after pointer-events-none" 
-                             alt="Toast After">
-
-                        <div class="absolute top-4 left-4">
-                            <span class="badge-label bg-black/60 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm transition-all">Raw</span>
+                        <!-- Bottom Image (Enhanced) -->
+                        <div class="absolute inset-0 w-full h-full">
+                            <img src="dish-after-3.png" 
+                                 draggable="false"
+                                 class="w-full h-full object-cover img-centered">
+                            <!-- Label -->
+                            <div class="absolute top-4 right-4 z-10">
+                                <span class="bg-primary/90 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg border border-white/20">
+                                    Enhanced
+                                </span>
+                            </div>
                         </div>
+
+                        <!-- Top Image (Raw) -->
+                        <div class="resize-boundary absolute top-0 left-0 h-full w-[50%] overflow-hidden bg-slate-200 will-change-[width] z-20">
+                            <img src="dish-before-3.png" 
+                                 draggable="false"
+                                 class="resize-img absolute top-0 left-0 max-w-none h-full object-cover img-centered will-change-[width]">
+                            <!-- Label -->
+                            <div class="absolute top-4 left-4 z-10">
+                                <span class="bg-black/60 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg border border-white/10">
+                                    Raw
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Handle -->
+                        <div class="slider-handle absolute top-0 bottom-0 left-[50%] w-0 z-30 flex flex-col justify-center items-center pointer-events-none" style="transform: translateX(-50%);">
+                            <div class="absolute inset-y-0 w-0.5 bg-white shadow-[0_0_10px_rgba(0,0,0,0.3)] h-full"></div>
+                            <div class="relative w-12 h-12 bg-white rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.2)] flex items-center justify-center text-primary transform transition-transform duration-200 ease-out z-30">
+                                <i class="ph-bold ph-arrows-left-right text-lg"></i>
+                                <div class="absolute inset-1 rounded-full border border-slate-100"></div>
+                            </div>
+                        </div>
+
                     </div>
                     
-                    <div class="flex justify-between items-center bg-slate-100 rounded-full p-1.5 relative">
-                        <button onclick="toggleCompare(2, 'before')" class="btn-before w-1/2 py-2 rounded-full text-sm font-bold bg-white text-slate-900 shadow-sm transition-all text-center">Before</button>
-                        <button onclick="toggleCompare(2, 'after')" class="btn-after w-1/2 py-2 rounded-full text-sm font-bold text-slate-500 hover:text-slate-700 transition-all text-center">After</button>
-                    </div>
+                    <!-- Text Content (No toggle buttons anymore) -->
                     <div class="mt-4 px-2">
-                        <h3 class="font-bold text-slate-900">Avocado Toast</h3>
-                        <p class="text-xs text-slate-500 uppercase tracking-wide">Exposure • Sharpness</p>
+                        <h3 class="font-bold text-slate-900">Wonton Soup</h3>
+                        <p class="text-xs text-slate-500 uppercase tracking-wide">White Balance • Clarity</p>
                     </div>
                 </div>
 
